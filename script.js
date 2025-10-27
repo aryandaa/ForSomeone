@@ -99,36 +99,38 @@ document.addEventListener("click", function (e) {
 	    },}).go();
 	}
 
-    function katanimasiAlts(){
-        new TypeIt(".messageC", {
-        strings: teksAnimasi,
-        startDelay: 1,
-        speed: 20,
-        cursor: true,
-        breakLines: true,
-        waitUntilVisible: true,
-        afterStep: function(instance) {
-            if (instance.is('completed')) {
-                setTimeout(function() {
-                    instance.next();
-                }, 400);
-            }
-        },
-        afterComplete: function(){      
-            document.querySelector(".ti-cursor").style.display = "none";
-            setTimeout(function() {
-                clearInterval(scrollInterval);
-            }, 1000);
-            setTimeout(() => {
-                stikerHidden();
-                setTimeout(() => {
-                   mainStiker.src = stikerAlt1.src;
-                   //setInterval(berjatuhan,300);
-                 }, 300);
-             }, 100);
+    // function katanimasiAlts(){
+    //     new TypeIt(".messageC", {
+    //     strings: teksAnimasi,
+    //     startDelay: 1,
+    //     speed: 20,
+    //     cursor: true,
+    //     breakLines: true,
+    //     waitUntilVisible: true,
+    //     afterStep: function(instance) {
+    //         if (instance.is('completed')) {
+    //             setTimeout(function() {
+    //                 instance.next();
+    //             }, 400);
+    //         }
+    //     },
+    //     afterComplete: function(){      
+    //         document.querySelector(".ti-cursor").style.display = "none";
+    //         setTimeout(function() {
+    //             clearInterval(scrollInterval);
+    //         }, 1000);
+    //         setTimeout(() => {
+    //             stikerHidden();
+    //             setTimeout(() => {
+    //                mainStiker.src = stikerAlt1.src;
+    //                //setInterval(berjatuhan,300);
+    //              }, 300);
+    //          }, 100);
              
-        },}).go();
-    }
+    //     },}).go();
+    // }
+
+    
     
     function stikerHidden(){
     	stiker.style="transform:scale(0);opacity:0;";
